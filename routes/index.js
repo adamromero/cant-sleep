@@ -108,7 +108,8 @@ router.post('/auth', function(req, res) {
 		let username = req.body.username;
 		let password = req.body.password;
 		if (username && password) {
-			connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
+			connection.query(`SELECT * FROM accounts WHERE username = ? AND aes_decrypt(password, 'admin_password') = ?`, 
+			[username, password], function(error, results, fields) {
 				if (results.length > 0) {
 					req.session.loggedin = true;
 					req.session.username = username;
