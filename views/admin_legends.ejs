@@ -1,0 +1,43 @@
+<h1 class="page-heading">Admin Legends</h1>
+<div>
+	<a href="/admin">Back</a>
+	<a href="/admin">Admin Home</a>
+	<div>
+		<table class="admin-table" cellspacing="10">
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>Title</td>
+					<td>Image</td>
+					<td>Content</td>
+					<td>Actions</td>
+				</tr>
+			</thead>
+			<tbody>
+			<% if (print) { %>
+				<% for(var i = 0; i < print.length; i++) { %>
+				<tr class="admin-table__row">
+					<td><%= print[i].legend_id%></td>
+					<td><%= print[i].title%></td>
+					<td><%= print[i].image%></td>
+					<td><%= print[i].content%></td>
+					<td>
+						<a href="/edit_legends/<%= print[i].legend_id %>">Edit</a>
+						<a href="/delete_legend/<%= print[i].legend_id %>">Delete</a>
+					</td>
+				</tr>
+				<% } %>
+			<% } %>
+			</tbody>
+		</table>
+	</div>
+	<div>Add entry:</div>
+	<div class="admin-form">
+		<form action="/add_legend" method="POST">
+			<input class="admin-input" type="text" name="title" placeholder="Title"><br>
+			<input class="admin-input" type="text" name="image" placeholder="Image"><br>
+			<textarea class="admin-textarea" name="content" id="" cols="30" rows="10" maxlength="20000"></textarea><br>
+			<button class="admin-button" type="submit">Save</button>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+<h1 class="page-heading">Admin Mysteries</h1>
+<div>
+    <a href="/admin_mysteries">Back</a>
+    <a href="/admin">Admin Home</a>
+    <div class="admin-form">
+        <form action="/update_mysteries/<%= print.mystery_id %>" method="POST">
+            <input class="admin-input" type="text" name="title" value="<%= print.title %>"><br>
+            <input class="admin-input" type="text" name="image" value="<%= print.image %>"><br>
+            <input class="admin-input" type="text" name="image_2" value="<%= print.image_2 %>"><br>
+            <input class="admin-input" type="text" name="image_3" value="<%= print.image_3 %>"><br>
+            <input class="admin-input" type="text" name="image_4" value="<%= print.image_4 %>"><br>
+            <input class="admin-input" type="text" name="image_5" value="<%= print.image_5 %>"><br>
+            <textarea class="admin-textarea" name="content" id="" cols="30" rows="10" maxlength="20000"><%= print.content %></textarea><br>
+            <button class="admin-button" type="submit">Save Changes</button>
+        </form>
+    </div>  
+</div>

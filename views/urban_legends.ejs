@@ -1,0 +1,39 @@
+<h1 class="page-heading">Urban Legends</h1>
+<input class="input-field" type="text" placeholder="Search" />
+<div class="grid-container text-center">
+<% for (var i = 0; i < print.length; i++) { %>
+	<div class="grid-column">
+		<div class="content-item">
+			<h2 class="content-item__title"><%= print[i].title %></h2>
+			<img class="content-item__image" src="images/<%= print[i].image %>" />
+			<div class="content-item__source text-content hide">
+				<h2 class="content-item__heading text-center"><%= print[i].title %></h2>
+				<div class="story-images">
+					<% if (print[i].image) { %>
+						<img class="text-content__image_1 center" src="images/<%= print[i].image %>" />
+					<% } %>
+					<% if (print[i].image_2) { %>
+						<img class="text-content__image_2 center" src="images/<%= print[i].image_2 %>" />
+					<% } %>
+					<% if (print[i].image_3) { %>
+						<img class="text-content__image_3 center" src="images/<%= print[i].image_3 %>" />
+					<% } %>
+					<% if (print[i].image_4) { %>
+						<img class="text-content__image_4 center" src="images/<%= print[i].image_4 %>" />
+					<% } %>
+					<% if (print[i].image_5) { %>
+						<img class="text-content__image_5 center" src="images/<%= print[i].image_5 %>" />
+					<% } %>
+				</div>
+				<div class="content-item__controls">
+					<input class="button" onclick="responsiveVoice.speak(document.getElementById('story_<%= i + 1 %>').innerText, 'UK English Male');" type='button' value='Play' />
+					<input class="button" onclick="responsiveVoice.cancel();" type="button" value="Stop">
+				</div>
+				<div id="story_<%= i + 1 %>" class="text-content__story">
+					<%= print[i].content %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<% } %>
+</div>

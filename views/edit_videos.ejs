@@ -1,0 +1,13 @@
+<h1 class="page-heading">Admin Videos</h1>
+<div>
+    <a href="/admin_videos">Back</a>
+    <a href="/admin">Admin Home</a>
+    <div class="admin-form">
+        <form action="/update_videos/<%= print.video_id %>" method="POST">
+            <input class="admin-input" type="text" name="title" value="<%= print.title %>"><br>
+            <input class="admin-input" type="text" name="url_video_id" value="<%= print.url_video_id %>"><br>
+            <input class="admin-input" type="text" name="gif" value="<%= print.gif %>"><br>
+            <button class="admin-button" type="submit">Save Changes</button>
+        </form>
+    </div>
+</div>

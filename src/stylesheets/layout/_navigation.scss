@@ -1,0 +1,51 @@
+.mobile-navigation-menu {
+    padding: 3rem 0 0;
+    background: $black;
+    position: relative;
+    transition: top .3s;
+    top: -175px;
+
+    @media (min-width: 642px) {
+	    padding: 3rem 0;
+	    transition: none;
+    }
+
+    &.is-open {
+    	top: 0;
+    }
+}
+
+.menu-list {
+	text-align: center;
+	font-size:  2rem;
+
+	@media (min-width: 642px) {
+		display: flex;
+		justify-content: space-evenly;
+		font-size:  1.4rem;
+		max-width: 100rem;
+    	margin: auto;
+	}
+
+	@media (min-width: 800px) {
+		font-size:  1.8rem;
+	}
+}
+
+.menu-list__item {
+	padding: 1rem 0;
+
+	a {
+		padding: 1rem 2rem;
+		transition: all .3s;
+
+		&:hover {
+			color: $light-gray;
+			text-shadow: $light-gray 0 0 14px;
+		}
+	}
+}
+
+.menu-icon-container {
+	padding: 3rem;
+}

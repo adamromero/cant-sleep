@@ -1,0 +1,13 @@
+<h1 class="page-heading">Login Page</h1>
+<div>
+    <form action="/auth" method="POST">
+        <input type="text" class="input-field input-field--login" autocomplete="off" placeholder="Username" name="username" /><br>
+        <input type="password" class="input-field input-field--login" autocomplete="new-password" placeholder="Password" name="password" /><br>
+        <input type="submit" class="button center" text="Login" />    
+    </form>
+    <% if (error) { %>
+    <div class="error text-center">
+        <%= error %>
+    </div>
+    <% } %>
+</div>

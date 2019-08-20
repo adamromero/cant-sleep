@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Can't Sleep? <%=page %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/bundle.css" />
+</head>
+<body>
+  <% include partials/navigation.ejs %>
+  <div class="wrapper is-shifted">
+    <% include partials/header.ejs %>
+    <section class="content">
+    	<%- body %>
+    </section>
+  </div>
+  <div id="modalWindow" class="modal">
+    <div class="modal-close">EXIT</div>
+    <div class="modal-content"></div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+  <script src="/bundle.js"></script>
+</body>
+</html>

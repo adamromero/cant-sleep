@@ -1,0 +1,18 @@
+<h1 class="page-heading">The Weird Side of YouTube</h1>
+<input class="input-field" type="text" placeholder="Search" />
+<div class="grid-container text-center">
+<% for (var i = 0; i < print.length; i++) { %>
+	<div class="grid-column">
+		<div class="content-item video-content">
+			<h2 class="content-item__title"><%= print[i].title %></h2>
+			<!--<img class="content-item__image" src="http://img.youtube.com/vi/<%= print[i].url_video_id %>/0.jpg" />-->
+			<img class="content-item__image" src="gifs/<%= print[i].gif %>" />
+			<iframe id="videoPlayer" 
+				class="content-item__source iframe-content hide" 
+				src="https://www.youtube.com/embed/<%= print[i].url_video_id%>?autoplay=1&enablejsapi=1&iv_load_policy=3" 
+				allowfullscreen allow="autoplay">
+			</iframe>
+		</div>
+	</div>
+<% } %>
+</div>

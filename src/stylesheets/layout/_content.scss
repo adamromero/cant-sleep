@@ -1,0 +1,260 @@
+.wrapper {
+	width: 100%;
+    height: 100%;
+    position: relative;
+    transition: top .3s;
+    top: -175px;
+
+    &.is-shifted {
+	    top: 0;
+    }
+
+    @media (min-width: 642px) {
+	    transition: none;
+    }
+}
+
+.is-locked {
+	overflow: hidden !important;
+}
+
+.content {
+    padding: 0 2rem 10rem;
+    
+    @media (min-width: 642px) {
+        padding: 0 4rem 10rem;
+    }
+}
+
+.header {
+	background: $black;
+	height: 8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+    @media (min-width: 642px) {
+	    height: 12rem;
+    }
+}
+
+.header-heading {
+	font-weight: bold;
+	color: $light-purple;
+	text-transform: uppercase;
+    letter-spacing: 1rem;
+    text-align: center;
+    margin: 0;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    box-shadow: 0 0 50px 5px;
+    width: 100%;
+
+    @media (min-width: 642px) {
+	    letter-spacing: 2.5rem;
+	    font-size: 2em;
+    }
+}
+
+.header-heading__link {
+    @media (min-width: 950px) {
+        opacity: 0;
+        animation: letter-space-in 3s ease-out forwards;
+    }
+}
+
+@keyframes letter-space-in {
+    0% {
+      letter-spacing: 6.5rem;
+      opacity: 0;
+    }
+    30% {
+      letter-spacing: 2.5rem;
+      opacity: 1;
+    }
+    100% {
+      letter-spacing: 2.5rem;
+      opacity: 1;
+    }
+}
+
+.page-heading {
+	font-size: 2rem;
+    text-align: center;
+	padding: 4rem 0;
+    margin: 0;
+    font-weight: normal;
+
+    @media (min-width: 642px) {
+    	font-size: 2.5rem;
+    }
+}
+
+.input-field {
+    margin: 0 auto 8rem;
+    display: block;
+    max-width: 50rem;
+    width: 100%;
+    padding: 0.8rem;
+    background: black;
+    border: 0.2rem $light-purple solid;
+    border-radius: 0.2rem;
+    outline-color: $light-purple;
+    color: $light-gray;
+    letter-spacing: 0.1rem;
+    box-sizing: border-box;
+
+    &::placeholder {
+        color: $light-gray;
+        letter-spacing: 0.1rem;
+    }
+}
+
+.input-field--login {
+    margin: auto;
+}
+
+.home-intro {
+	text-align: center;
+    font-size: 2rem;
+    padding: 5rem 0;
+}
+
+.intro-fade {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+  
+.home-intro_1 {
+    animation-delay: .8s;
+}
+  
+.home-intro_2 {
+    animation-delay: 2.5s;
+}
+
+.modal {
+	position: fixed;
+    overflow-y: auto;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    background: $black;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+
+    &.is-open {
+		opacity: 1;
+        visibility: visible;
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+        transition: all ease 0.5s;
+    }
+}
+
+.modal-content {
+    padding: 0 2rem;
+
+    @media (min-width: 642px) {
+        padding: 0 3rem;
+    }
+}
+
+.responsive-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.modal-close {
+	text-align: center;
+    font-size: 2rem;
+    margin: 2rem auto;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ff3d3d;
+    border: 2px solid #ff3d3d;
+    max-width: 5.5rem;
+}
+
+.content-item {
+    position: relative;
+	height: 0;
+    width: 100%;
+	padding-bottom: 75%;
+    max-width: 50rem;
+    margin: auto;
+}
+
+.content-item__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    opacity: 0.8;
+    margin: 0;
+    cursor: pointer;
+    font-size: 1.8rem;
+	border-radius: .8rem;
+    z-index: 1;
+}
+
+.content-item__heading {
+    color: $light-purple;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 1.5rem;
+
+    @media (min-width: 642px) {
+        font-size: 2rem;
+    }
+}
+
+.content-item__image {
+    width: 100%;
+    max-width: 50rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    object-fit: cover;
+}
+
+.content-item__controls {
+	margin: auto;
+    max-width: 15.9rem;
+    padding: 3rem 0 0;
+}
+
+.iframe-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    max-height: 70rem;
+	border: 0;
+}

@@ -1,0 +1,25 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font: 1.4rem 'Open Sans', sans-serif;
+	background: $black;
+	color: $light-gray;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: $light-purple;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
