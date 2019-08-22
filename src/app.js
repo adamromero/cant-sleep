@@ -13,8 +13,8 @@ var app = (function() {
 			modalContent: document.querySelector('.modal-content'),
 			menuIcon: document.querySelector(".menu-icon"),
 			inputSearch: document.querySelector(".input-search"),
-			gridColumn: document.querySelectorAll(".grid-column"),
-			videoPlayer: document.getElementById("videoPlayer")
+			gridColumn: document.querySelectorAll(".grid-column")
+			//videoPlayer: document.getElementById("videoPlayer")
 		},
 
 		init: function() {
@@ -45,6 +45,7 @@ var app = (function() {
 					app.filterItemsBySearch(this);
 				});
 			}
+			/*
 			if (s.videoPlayer) {
 				s.videoPlayer.addEventListener("onStateChange", function(state){
 					console.log(state);
@@ -52,7 +53,7 @@ var app = (function() {
 						console.log("you must whip it!");
 					}
 				});
-			}
+			}*/
 		},
 
 		filterItemsBySearch: function (input) {
@@ -87,7 +88,10 @@ var app = (function() {
 					let sourceContent = $(this).children(selector)[0].cloneNode(true);
 					let isVideo = sourceContent.tagName === 'IFRAME';
 					app.insertContentInModal(sourceContent, isVideo);
-					app.arrangePhotosWithinText();
+
+					if (!isVideo) {
+						app.arrangePhotosWithinText();
+					}
 				});
 			});
 
@@ -159,6 +163,7 @@ var app = (function() {
 				s.modalContent.classList.add('responsive-video');
 				s.modalContent.childNodes[0].style.height = (windowHeight * .75).toString() + "px";
 				content.src += "&autoplay=1";
+				content.setAttribute("allow", "autoplay");
 			}
 		}
 	};

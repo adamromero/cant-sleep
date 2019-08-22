@@ -7,6 +7,7 @@ var connection  = require('express-myconnection');
 var session = require('express-session');
 var mysql = require('mysql');
 var keys = require('./config');
+const cacheTime = 86400000 * 30;
 var app = express();
 
 var dbOptions = {
@@ -31,7 +32,9 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressLayouts);
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'dist'), {
+	maxAge: cacheTime
+}));
 app.use('/', index);
 
 app.listen(process.env.PORT || keys.PORT);

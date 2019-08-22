@@ -7,10 +7,10 @@
 			<h2 class="content-item__title"><%= print[i].title %></h2>
 			<!--<img class="content-item__image" src="http://img.youtube.com/vi/<%= print[i].url_video_id %>/0.jpg" />-->
 			<img class="content-item__image" src="gifs/<%= print[i].gif %>" />
-			<iframe id="videoPlayer" 
+			<iframe id="videoPlayer<%=i%>" 
 				class="content-item__source iframe-content hide" 
-				src="https://www.youtube.com/embed/<%= print[i].url_video_id%>?autoplay=1&enablejsapi=1&iv_load_policy=3" 
-				allowfullscreen allow="autoplay">
+				src="https://www.youtube.com/embed/<%= print[i].url_video_id%>?enablejsapi=1&iv_load_policy=3" 
+				allowfullscreen>
 			</iframe>
 		</div>
 	</div>
