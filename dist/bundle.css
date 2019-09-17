@@ -596,8 +596,7 @@ img {
 
 .text-content__story {
   grid-area: story;
-  line-height: 1.5;
-  font-size: 1.8rem; }
+  line-height: 1.5; }
 
 .grid-column {
   box-shadow: 0px 0px 20px 5px;
