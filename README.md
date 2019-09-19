@@ -1,21 +1,6 @@
 
-css grid layout responsive
-css flexbox
-css animation
+Horror themed website tells stories of legends and mysteries along with the strangest videos you'll find on YouTube.
 
-javascript es6
-filter stories and videos
-
-
-mysql
-
-urban legends
-	description
-	story
-unsolved mysteries
-	description
-	story
-the weird side of youtube
-	title
-	video url
-	description?
+cd cant-sleep
+npm run
+nodemon
