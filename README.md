@@ -4,6 +4,6 @@
 
 `cd cant-sleep`
 
-`npm run`
+`npm install`
 
 `nodemon`
