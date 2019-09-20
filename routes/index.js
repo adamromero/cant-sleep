@@ -61,8 +61,8 @@ router.get('/unsolved_mysteries', function(req, res, next) {
 	});
 });
 
-//Get data from the weird side of youtube table
-router.get('/the_weird_side_of_youtube', function(req, res, next){
+//Get data from the weird youtube table
+router.get('/weird_youtube', function(req, res, next){
 	req.getConnection(function(err, connection) {
 		if (err) {
 			return next(err);
@@ -72,8 +72,8 @@ router.get('/the_weird_side_of_youtube', function(req, res, next){
 	        if(err){
 	            throw next(err);
 	        } else {
-				res.render('the_weird_side_of_youtube', {
-						page: "- The Weird Side of YouTube",
+				res.render('weird_youtube', {
+						page: "- Weird YouTube",
 						print: result
 					}
 				);
