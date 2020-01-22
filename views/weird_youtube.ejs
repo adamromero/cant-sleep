@@ -13,13 +13,11 @@
             src="http://img.youtube.com/vi/<%= print[i].url_video_id %>/0.jpg"
          />
          <% } %>
-         <iframe
-            id="videoPlayer<%=i%>"
-            class="content-item__source iframe-content hide"
-            src="https://www.youtube.com/embed/<%= print[i].url_video_id%>?enablejsapi=1&iv_load_policy=3"
-            allowfullscreen
-         >
-         </iframe>
+         <div
+            id="frame<%=i%>"
+            class="content-item__video"
+            data-video="<%= print[i].url_video_id%>"
+         ></div>
       </div>
    </div>
    <% } %>
