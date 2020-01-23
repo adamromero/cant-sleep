@@ -3,7 +3,7 @@
    grid-template-columns: repeat(1, minmax(200px, 1fr));
    grid-gap: 8rem 6rem;
    grid-template-areas: "grid-row";
-   max-width: 120rem;
+   max-width: 70rem;
    margin: auto;
 
    @media (min-width: 642px) {
@@ -14,6 +14,7 @@
    @media (min-width: 1024px) {
       grid-template-columns: repeat(3, minmax(200px, 1fr));
       grid-template-areas: "grid-row grid-row";
+      max-width: 120rem;
    }
 
    @media (min-width: 1260px) {
@@ -106,6 +107,9 @@
    transition: color 0.3s;
    overflow: hidden;
    border-radius: 1rem;
+   max-width: 30rem;
+   width: 100%;
+   margin: auto;
 
    &:hover {
       color: $light-purple;
