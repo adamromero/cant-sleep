@@ -406,7 +406,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font: 1.4rem 'Open Sans', sans-serif;
+  font: 1.4rem "Open Sans", sans-serif;
   background: #000;
   color: #efecf3;
   margin: 0; }
@@ -422,6 +422,14 @@ a {
 
 img {
   max-width: 100%; }
+
+h2 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 1.6rem;
+  font-weight: normal;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase; }
 
 @media (min-width: 642px) {
   .show-for-mobile {
@@ -917,3 +925,8 @@ img {
   padding: 0.8rem 2rem;
   font-size: 1.6rem;
   cursor: pointer; }
+
+@media (min-width: 40.1em) {
+  .admin-content__category {
+    display: flex;
+    justify-content: space-evenly; } }
